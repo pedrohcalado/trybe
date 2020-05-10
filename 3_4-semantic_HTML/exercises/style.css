@@ -2,13 +2,19 @@ body {
     margin: 0;
 }
 #main-section {
-    border: 1px solid black;
+    border: 3px solid black;
     padding: 10px;
+    display: inline-block;
+    width: 80%;
+}
+#main-div {
+    border: 5px solid red;
 }
 nav {
     background-color: teal;
     border: 1px solid teal;
     height: 50px;
+    width: 100%;
 }
 nav li {
     display: inline-block;
@@ -26,4 +32,10 @@ nav a {
 }
 nav a:hover {
     color: black
+}
+aside {
+    border: 1px solid blue;
+    display: inline-block;
+    position: absolute;
+    width: 20%;
 }
