@@ -4,7 +4,7 @@ body {
 }
 nav {
     background-color: orangered;
-    border: 1px solid teal;
+    border: 1px solid orangered;
     height: 50px;
     width: 100%;
 }
@@ -75,6 +75,16 @@ img {
     width: 40%;
     float: left;
     margin: 15px 15px 5px 15px ;
+}
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+table th, td{
+    border-collapse: collapse;
+    border: 1px solid white;
+    background-color: brown;
+    padding: 5px;
 }
 footer {
     text-align: center;
