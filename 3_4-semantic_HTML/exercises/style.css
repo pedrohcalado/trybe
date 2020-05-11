@@ -39,24 +39,28 @@ nav#navigation-bar a:hover {
 #main-section {
     padding: 10px;
     display: inline-block;
-    width: 58.5%;
+    width: 60%;
     position: relative;
     left: 20%;
 }
 aside {
     background-color: greenyellow;
     display: inline-block;
-    width: 20%;
+    width: 19.45%;
     position: absolute;
     left: 80%;
     height: 100%;
+    padding-left: 10px;
+}
+aside h3 {
+    text-align: center;
 }
 h1 {
     text-align: center;
 }
 h2 {
     border-bottom: 1px solid red;
-    border-width: 3px;
+    border-width: 1.5px;
 }
 article#main-article h3 {
     border-bottom: 1px solid purple;
@@ -100,8 +104,7 @@ nav#menu a {
     text-decoration: none;
     color: black;
     border: 1px solid orange;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 10px;
     display: block;
     margin: 0px;
 }
@@ -113,4 +116,6 @@ footer {
     text-align: center;
     background-color: black;
     color: brown;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
