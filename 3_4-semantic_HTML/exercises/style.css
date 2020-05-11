@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    color: black;
+}
+nav#navigation-bar {
+    background-color: orangered;
+    border: 1px solid orangered;
+    height: 50px;
+    width: 100%;
+}
+nav#navigation-bar li {
+    display: inline-block;
+    margin: 0;
+    list-style: none;
+}
+nav#navigation-bar ul {
+    text-align: right;
+}
+nav#navigation-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 17.5px 30px 17.5px 30px;
+}
+nav#navigation-bar a:hover {
+    color: black
+}
+#main-div {
+    position: relative;
+    background-color: teal;
+}
+#left-section {
+    background-color: blueviolet;
+    display: inline-block;
+    width: 20%;
+    position: absolute;
+    height: 100%;
+}
+#main-section {
+    padding: 10px;
+    display: inline-block;
+    width: 60%;
+    position: relative;
+    left: 20%;
+}
+aside {
+    background-color: greenyellow;
+    display: inline-block;
+    width: 19.45%;
+    position: absolute;
+    left: 80%;
+    height: 100%;
+    padding-left: 10px;
+}
+aside h3 {
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    border-bottom: 1px solid red;
+    border-width: 1.5px;
+}
+article#main-article h3 {
+    border-bottom: 1px solid purple;
+}
+section p {
+    text-align: justify;
+    padding: 15px;
+}
+img {
+    width: 40%;
+    margin-left: 30%;
+    border: 8px ridge blue;
+}
+#high-def-devices-img {
+    width: 40%;
+    float: left;
+    margin: 15px 15px 5px 15px ;
+}
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+table th, td{
+    border-collapse: collapse;
+    border: 1px solid white;
+    background-color: brown;
+    padding: 5px;
+}
+section#left-section h3 {
+    text-align: center;
+}
+nav#menu ul {
+    padding-left: 0;
+}
+nav#menu li {
+    list-style: none;
+    text-transform: uppercase;
+    display: block;
+}
+nav#menu a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid orange;
+    padding: 20px 10px;
+    display: block;
+    margin: 0px;
+}
+nav#menu a:hover {
+    text-decoration: none;
+    color: white;
+}
+footer {
+    text-align: center;
+    background-color: black;
+    color: brown;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
