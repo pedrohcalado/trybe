@@ -1,15 +1,6 @@
 body {
     margin: 0;
 }
-#main-section {
-    border: 3px solid black;
-    padding: 10px;
-    display: inline-block;
-    width: 80%;
-}
-#main-div {
-    border: 5px solid red;
-}
 nav {
     background-color: teal;
     border: 1px solid teal;
@@ -33,11 +24,29 @@ nav a {
 nav a:hover {
     color: black
 }
+#main-div {
+    position: relative;
+}
+#left-section {
+    display: inline-block;
+    width: 20%;
+    position: absolute;
+    border:1px solid orange;
+}
+#main-section {
+    border: 1px solid black;
+    padding: 10px;
+    display: inline-block;
+    width: 58.5%;
+    position: relative;
+    left: 20%;
+}
 aside {
     border: 1px solid blue;
     display: inline-block;
-    position: absolute;
     width: 20%;
+    position: absolute;
+    left: 80%;
 }
 #general-info-img {
     width: 40%;
@@ -46,4 +55,8 @@ aside {
     width: 40%;
     float: left;
     margin-right: 15px;
+}
+footer {
+    text-align: center;
+
 }
