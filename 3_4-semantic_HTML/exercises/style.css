@@ -59,7 +59,7 @@ h2 {
     border-bottom: 1px solid red;
     border-width: 3px;
 }
-h3 {
+article#main-article h3 {
     border-bottom: 1px solid purple;
 }
 section p {
