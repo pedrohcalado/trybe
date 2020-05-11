@@ -39,6 +39,9 @@ aside {
     position: absolute;
     width: 20%;
 }
+#general-info-img {
+    width: 40%;
+}
 #high-def-devices-img {
     width: 40%;
     float: left;
