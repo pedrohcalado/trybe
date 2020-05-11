@@ -30,7 +30,6 @@ nav a:hover {
     background-color: teal;
 }
 #left-section {
-    border:1px solid orange;
     background-color: blueviolet;
     color: white;
     display: inline-block;
@@ -39,7 +38,6 @@ nav a:hover {
     height: 100%;
 }
 #main-section {
-    border: 1px solid black;
     padding: 10px;
     display: inline-block;
     width: 58.5%;
@@ -47,7 +45,6 @@ nav a:hover {
     left: 20%;
 }
 aside {
-    border: 1px solid greenyellow;
     background-color: greenyellow;
     display: inline-block;
     width: 20%;
@@ -65,7 +62,7 @@ h2 {
 h3 {
     border-bottom: 1px solid purple;
 }
-p {
+section p {
     border: 1px solid plum;
     text-align: justify;
 }
@@ -79,5 +76,8 @@ p {
 }
 footer {
     text-align: center;
-
+    background-color: black;
+    color: brown;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
