@@ -6,14 +6,16 @@ Atente que, sobre o custo do produto, incide um imposto de 20%.
 Seu programa também deve emitir uma mensagem de erro e encerrar caso algum dos seus valores de entrada seja menor que zero.
 */
 
-let custo = 20;
-let valorDeVenda = 130;
-let lucro = valorDeVenda - (custo*1.2);
-
-if (custo<0 || valorDeVenda<0){
-    console.log("Não é permitido o uso de valores negativos em custo e valor de venda");
-}else {
-    console.log(lucro*1000);
+function profit(custo,valorDeVenda,numeroDeProdutos) {
+  let lucro = valorDeVenda - (custo*1.2);
+  if (custo<0 || valorDeVenda<0){
+      console.log("Não é permitido o uso de valores negativos em custo e valor de venda");
+  }else {
+      console.log(lucro*numeroDeProdutos);
+  }
 }
+
+profit(15,30,1000);
+
 
 
