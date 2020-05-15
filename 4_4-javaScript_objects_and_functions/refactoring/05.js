@@ -2,9 +2,19 @@
 
 //Para os ângulos serem de um triângulo válido, a soma dos três deve ser 180 graus. Caso os ângulos estejam inválidos, o programa deve retornar uma mensagem de erro.
 
-let a = 60;
-let b = 50;
-let c = 74;
+function isTriangle(a,b,c) {
+  if (a+b+c === 180) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
-(a+b+c==180)?console.log(true):console.log(false);
+let notTriangle = isTriangle(43,56,32);
+let triangle = isTriangle(120,30,30);
+
+console.log(notTriangle);
+console.log(triangle);
+
+
 
