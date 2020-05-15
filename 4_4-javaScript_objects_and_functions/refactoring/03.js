@@ -4,16 +4,18 @@ let a = 1;
 let b = 1;
 let c = 2;
 
-if (a==b==c){
-    console.log("Os 3 números são iguais")
+function higher(a,b,c) {
+  if (a==b==c){
+      console.log("Os 3 números são iguais")
+  }
+  else if (a>=b && a>=c) {
+      return a;
+  } else if (b>=a && b>=c) {
+      return b;
+  } else {
+      return c;
+  }
 }
-else if (a>=b && a>=c) {
-    console.log(a);
-    return a;
-} else if (b>=a && b>=c) {
-    console.log(b);
-    return b;
-} else {
-    console.log(c);
-    return c;
-}
+
+let maior = higher(1,2,3);
+console.log(maior);
