@@ -2,10 +2,15 @@
 
 let a = -3;
 
-if (a>0){
+function positiveOrNegative(a){
+  if (a>0){
     return "positive";
 } else if(a<0){
     return "negative";
 }else {
     return "zero";
 }
+}
+
+let signal = positiveOrNegative(-3);
+console.log(signal)
