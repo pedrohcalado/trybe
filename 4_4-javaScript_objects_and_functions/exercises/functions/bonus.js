@@ -1,7 +1,8 @@
 //Faça um programa que receba uma string em algarismos romanos e retorne o número que a string representa.
 
 function romans(romanNumber) {
-  //criando objeto com numeros romanos para consulta
+  //criando objeto com numeros romanos para consulta e colocando romanNumbers em uppercase
+  romanNumber = romanNumber.toUpperCase();
   let romanToNumber = {
     I: 1,   
     V: 5,   
