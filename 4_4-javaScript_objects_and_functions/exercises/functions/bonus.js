@@ -12,24 +12,17 @@ function romans(romanNumber) {
     M: 1000
   }
 
-  //verifica se romanNumber está no romanToNumber
-  if (romanToNumber[romanNumber] !== undefined) {
-    return romanToNumber[romanNumber];
-  } 
-  //faz a contagem para os outros casos
-  else {
-    let soma = 0;
-    for (let i = romanNumber.length-1; i >= 0; i-=1) {
-      if (romanToNumber[romanNumber[i]] <= romanToNumber[romanNumber[i-1]] || romanToNumber[romanNumber[i-1]] == undefined) {
-        soma += romanToNumber[romanNumber[i]];
-      }
-      else if (romanToNumber[romanNumber[i]] > romanToNumber[romanNumber[i-1]]) {
-        soma += romanToNumber[romanNumber[i]] - romanToNumber[romanNumber[i-1]];
-        i -= 1;
-      }
+  let soma = 0;
+  for (let i = romanNumber.length-1; i >= 0; i-=1) {
+    if (romanToNumber[romanNumber[i]] <= romanToNumber[romanNumber[i-1]] || romanToNumber[romanNumber[i-1]] == undefined) {
+      soma += romanToNumber[romanNumber[i]];
     }
-    return soma;  
+    else if (romanToNumber[romanNumber[i]] > romanToNumber[romanNumber[i-1]]) {
+      soma += romanToNumber[romanNumber[i]] - romanToNumber[romanNumber[i-1]];
+      i -= 1;
+    }
   }
+  return soma;  
 }
 
 //testando
