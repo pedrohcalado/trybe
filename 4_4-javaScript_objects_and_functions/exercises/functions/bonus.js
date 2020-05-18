@@ -11,7 +11,7 @@ function romans(romanNumber) {
     D: 500,
     M: 1000
   }
-
+  //criando variavel soma que guarda a soma dos algarismos do numero romano, comecando do fim do número
   let soma = 0;
   for (let i = romanNumber.length-1; i >= 0; i-=1) {
     if (romanToNumber[romanNumber[i]] <= romanToNumber[romanNumber[i-1]] || romanToNumber[romanNumber[i-1]] == undefined) {
