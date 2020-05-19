@@ -19,7 +19,7 @@
     </div>
     
     <script>
-      // Exercises
+      // Exercicios de busca
 
       // 1. Acesse o elemento elementoOndeVoceEsta.
       console.log(document.getElementById("elementoOndeVoceEsta"));
@@ -38,6 +38,24 @@
       // 8. Agora acesse o terceiroFilho a partir de pai.
       console.log(document.getElementById("pai").lastElementChild.previousElementSibling);
 
+
+      // Exercícios de criação de elementos
+
+      // 1. Crie um irmão para elementoOndeVoceEsta.
+      let d = document.createElement("div");
+      document.getElementById("pai").appendChild(d);
+      // 2. Crie um filho para elementoOndeVoceEsta.
+      let p = document.createElement("p");
+      document.getElementById("elementoOndeVoceEsta").appendChild(p)
+        // Coloca texto dentro do elemento criado
+        document.getElementById("elementoOndeVoceEsta").lastElementChild.innerHTML = "Textando";
+      // 3. Crie um filho para primeiroFilhoDoFilho.
+      let a = document.createElement("a");
+      document.getElementById("primeiroFilhoDoFilho").appendChild(a);
+      // 4. A partir desse filho criado, acesse terceiroFilho.
+      console.log(document.getElementById("primeiroFilhoDoFilho").lastElementChild.parentElement.parentElement.nextElementSibling);
+
+      
     </script>
   </body>
 </html>
