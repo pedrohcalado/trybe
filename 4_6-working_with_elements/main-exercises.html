@@ -88,8 +88,31 @@
         document.querySelector(".left-content img").className = "small-image";
 
         // 8. Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, … como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+          // criando ul
+        let ul = document.createElement("ul");
+        document.querySelector(".right-content").appendChild(ul);
+          // criando objeto de referência para li
+        let literalToString = {
+          1: "um",
+          2: "dois",
+          3: "três",
+          4: "quatro",
+          5: "cinco",
+          6: "seis",
+          7: "sete",
+          8: "oito",
+          9: "nove",
+          10: "dez"
+        };
+          // criando li
+        for (i in literalToString) {
+          let li = document.createElement("li");
+          document.querySelector("ul").appendChild(li).innerHTML = literalToString[i];
+        }
+
         // 9. Adicione 3 tags h3, todas sendo filhas do div criado no passo 2
-      
+        
+        
       // Exercícios de alteração e remoção
 
         // 1. Adicione a classe title na tag h1 criada;
