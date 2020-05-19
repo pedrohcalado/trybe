@@ -32,7 +32,7 @@
       // 5. Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
       console.log(document.getElementById("elementoOndeVoceEsta").previousElementSibling);
       // 6. Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
-      console.log(document.getElementById("elementoOndeVoceEsta").nextSibling);
+      console.log(document.getElementById("elementoOndeVoceEsta").nextElementSibling);
       // 7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
       console.log(document.getElementById("elementoOndeVoceEsta").nextElementSibling);
       // 8. Agora acesse o terceiroFilho a partir de pai.
@@ -55,7 +55,18 @@
       // 4. A partir desse filho criado, acesse terceiroFilho.
       console.log(document.getElementById("primeiroFilhoDoFilho").lastElementChild.parentElement.parentElement.nextElementSibling);
 
-      
+      // Exercícios de remoção
+
+      // 1. Remova todos os elementos da página, menos pai, elementoOndeVoceEsta e primeiroFilhoDoFilho
+      document.getElementById("primeiroFilhoDoFilho").removeChild(a);
+      document.getElementById("elementoOndeVoceEsta").removeChild(segundoEUltimoFilhoDoFilho);
+      document.getElementById("elementoOndeVoceEsta").removeChild(p);
+      document.getElementById("pai").firstElementChild.remove();
+      document.getElementById("pai").removeChild(terceiroFilho);
+      document.getElementById("pai").removeChild(quartoEUltimoFilho);
+      document.getElementById("pai").lastElementChild.remove();
+      document.body.innerHTML = document.getElementById("paiDoPai").innerHTML;
+
     </script>
   </body>
 </html>
