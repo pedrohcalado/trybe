@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.4</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 4.4 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+        /*
+        Descrição do exercício
+
+          Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+          - document.getElementById()
+          - document.getElementsByClassName()
+          - document.getElementsByTagName()
+            1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo   pensando no texto e sim realizando o exercício)
+            2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe.
+            3. Crie uma função que mude a cor do quadrado vermelho para branco.
+            4. Crie uma função que corrija o texto da tag <h1>.
+            5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+            6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        */
+        
+
+        //Criando funcões
+
+          // Criando método que muda background color by class (inserir strings)
+          function changeColorByClass (element, color) {
+            let classes = document.getElementsByClassName(element);
+            for (let i = 0; i < classes.length; i += 1) {
+              classes[i].style.backgroundColor = color;
+            }
+          }
+
+          //Criando método que muda o texto dentro de uma tag
+          function changeTextInsideATag(tag, index, text) {
+            document.getElementsByTagName(tag)[index-1].innerHTML = text;
+          }
+
+          //Criando método que muda o texto de uma tag pra maiusculo
+          function upperCaseTag(tag) {
+            let str = document.getElementsByTagName(tag);
+            for (let i = 0; i < str.length; i += 1) {
+              str[i].innerHTML = str[i].innerHTML.toUpperCase();
+            }
+          }
+
+          //Criando função qeu exibe o conteúdo de determinada tag no console
+          function showTagContent(tag) {
+            let str = document.getElementsByTagName(tag);
+            for (let i = 0; i < str.length; i+=1) {
+              console.log(str[i].innerHTML);
+            }
+          }
+
+        //Exercises
+        
+          // 1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo  pensando no texto e sim realizando o exercício) 
+          changeTextInsideATag ("p", 2, "Meu vejo como desenvolvedor trabalhando em uma startup");
+
+          // 2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe.
+          changeColorByClass("main-content", "green");
+
+          // 3. Crie uma função que mude a cor do quadrado vermelho para branco.
+          changeColorByClass("center-content", "white");
+
+          // 4. Crie uma função que corrija o texto da tag <h1>
+          changeTextInsideATag ("h1", 1, "Exercício 4.5 - JavaScript");
+
+          // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+          upperCaseTag("p");
+
+          // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console
+          showTagContent("p");  
+          
+    </script>
+  </body>
+</html>
