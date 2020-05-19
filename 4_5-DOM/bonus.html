@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.4</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .impar {
+        color: white;
+      }
+
+      .par {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Piratõn Challenge </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <ul>
+          <li>Item 0</li>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+        /*
+        Descrição do exercício
+          Criar uma lista (ul, li) dinâmica:
+            Os itens com índice par devem receber a classe par;
+            Os itens com índice impar devem receber a classe impar;
+            O último item da lista deve conter as classes impar e par.
+        */
+        
+        let lists = document.getElementsByTagName("li");
+        for (let i = 0; i < lists.length; i+=1) {
+          if (i % 2 == 0 && i != lists.length-1) {
+            lists[i].className += "par";  
+          } else if (i % 2 != 0 && i != lists.length-1) {
+            lists[i].className += "impar";
+          } else {
+            lists[i].className += "impar par";
+          }
+        }
+      
+          
+    </script>
+  </body>
+</html>
