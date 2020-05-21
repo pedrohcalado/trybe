@@ -64,6 +64,8 @@
       }
 
     //For each operation, create an event listener for the button, and when it's clicked, find the value of the appropriate input and show the result of the calculation in the solution div.
+
+    //Bonus: respond to key presses so that the user doesn't have to click the button.
       //squareNumber
         //create a variable to get the input value
         let square = document.querySelector("#square-input");
@@ -74,7 +76,7 @@
           document.querySelector("#solution").innerHTML = squareNumber(square.value);
         }
         //add the event listener to the button
-        squareButton.addEventListener("click", squareSolution);
+        square.addEventListener("keyup", squareSolution);
 
       //halfOf
         //repeat the same steps of the above function
@@ -83,7 +85,7 @@
         function halfSolution() {
           document.querySelector("#solution").innerHTML = halfOf(half.value);
         }
-        halfButton.addEventListener("click", halfSolution);
+        half.addEventListener("keyup", halfSolution);
 
       //percentOf
         //repeat the same steps 
@@ -93,7 +95,8 @@
         function percentSolution(){
           document.querySelector("#solution").innerHTML = percentOf(percentFraction.value, percentWhole.value);
         }
-        percentButton.addEventListener("click", percentSolution);
+        percentFraction.addEventListener("keyup", percentSolution);
+        percentWhole.addEventListener("keyup", percentSolution);
 
       //areaOfCircle
         //repeat the same steps
@@ -102,11 +105,9 @@
         function areaSolution() {
           document.querySelector("#solution").innerHTML = areaOfCircle(circle.value);
         }
-        circleButton.addEventListener("click", areaSolution);
+        circle.addEventListener("keyup", areaSolution);
         
 
-    //Bonus: respond to key presses so that the user doesn't have to click the button.
-        
   </script>
   
 </body>
