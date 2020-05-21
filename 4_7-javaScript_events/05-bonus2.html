@@ -10,13 +10,24 @@
       let cat = document.querySelector("img");
       let distance = cat.style;
       distance.left = "0px";
+      distance.right = "auto";
+      let foward = true;
+
       function catWalk() {
-        distance.left = parseInt(distance.left) + 10 + "px";
-        if (parseInt(distance.left) == window.innerWidth) {
-          distance.left = "0px";
+        if (parseInt(distance.left) >= window.innerWidth) {
+          foward = false;
+        }
+        if (parseInt(distance.left) <= 0) {
+          foward = true;
+        }
+        if (foward) {
+          distance.left = parseInt(distance.left) + 10 + "px";
+        } else {
+          distance.left = parseInt(distance.left) - 10 + "px";
         }
       }
-      let walk = setInterval(catWalk, 50);
+      setInterval(catWalk, 20);
     </script>
   </body>
 </html>
+
