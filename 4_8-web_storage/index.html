@@ -5,21 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    #backgound-color {
 
+    }
   </style>
 </head>
 <body>
   <section>
     <h1>Chosing how you want to read</h1>
-    <h4>Backgound color: <input type="text"></h3>
-    <h4>Text color: <input type="text"></h3>
-    <h4>Font size: <input type="text"></h3>
-    <h4>Line spacing: <input type="text"></h3>
-    <h4>Font family: <input type="text"></h3>
-    <p>
+    <h4>Backgound color: <input id="background-color" type="text"> <button id="button1">Apply!</button> </h3>
+    <h4>Text color: <input id="text-color" type="text"> <button id="button2">Apply!</button> </h3>
+    <h4>Font size: <input id="font-size" type="text"> <button id="button3">Apply!</button> </h3>
+    <h4>Line spacing: <input id="line-spacing" type="text"> <button id="button4">Apply!</button> </h3>
+    <h4>Font family: <input id="font-family" type="text"> <button id="button5">Apply!</button> </h3>
+    <p id="main-paragraph">
       <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </p>  
   </section>
+
+  <script>
+    
+    //create variables associated with input field
+    let backgroundColor = document.querySelector("#background-color");
+    let textColor = document.querySelector("#text-color");
+    let fontSize = document.querySelector("#font-size");
+    let lineSpacing = document.querySelector("#line-spacing");
+    let fontFamily = document.querySelector("#font-family");
+    
+    //create variables associated with each button
+    let btn1 = document.querySelector("#button1");
+    let btn2 = document.querySelector("#button2");
+    let btn3 = document.querySelector("#button3");
+    let btn4 = document.querySelector("#button4");
+    let btn5 = document.querySelector("#button5");
+
+    //add event listener and save the value typed when button is clicked
+    btn1.addEventListener("click", function(){
+      //save the input on local storage
+      localStorage.setItem("backgound-color", backgroundColor.value);
+      //apply the saved input on the element
+      document.querySelector("body").style.backgroundColor = localStorage.getItem("backgound-color");
+    })
+    btn2.addEventListener("click", function(){
+      localStorage.setItem("text-color", textColor.value);
+      document.querySelector("p").style.color = localStorage.getItem("text-color");
+    })
+    btn3.addEventListener("click", function(){
+      localStorage.setItem("font-size", fontSize.value);
+      document.querySelector("p").style.fontSize = localStorage.getItem("font-size");
+    })
+    btn4.addEventListener("click", function(){
+      localStorage.setItem("line-spacing", lineSpacing.value);
+      document.querySelector("p").style.lineHeight = localStorage.getItem("line-spacing");
+    })
+    btn5.addEventListener("click", function(){
+      localStorage.setItem("font-family", fontFamily.value);
+      document.querySelector("p").style.fontFamily = localStorage.getItem("font-family");
+    })
+
+    //keep the values apllied even when the window is loaded
+    window.onload = function(){
+      document.querySelector("body").style.backgroundColor = localStorage.getItem("backgound-color");
+      document.querySelector("p").style.color = localStorage.getItem("text-color");
+      document.querySelector("p").style.fontSize = localStorage.getItem("font-size");
+      document.querySelector("p").style.lineHeight = localStorage.getItem("line-spacing");
+      document.querySelector("p").style.fontFamily = localStorage.getItem("font-family");
+    }
+  </script>
   
 </body>
 </html>
