@@ -49,11 +49,11 @@
     })
     btn3.addEventListener("click", function(){
       localStorage.setItem("font-size", fontSize.value);
-      document.querySelector("p").style.fontSize = localStorage.getItem("font-size");
+      document.querySelector("p").style.fontSize = localStorage.getItem("font-size") + "px";
     })
     btn4.addEventListener("click", function(){
       localStorage.setItem("line-spacing", lineSpacing.value);
-      document.querySelector("p").style.lineHeight = localStorage.getItem("line-spacing");
+      document.querySelector("p").style.lineHeight = localStorage.getItem("line-spacing") + "px";
     })
     btn5.addEventListener("click", function(){
       localStorage.setItem("font-family", fontFamily.value);
@@ -64,8 +64,8 @@
     window.onload = function(){
       document.querySelector("body").style.backgroundColor = localStorage.getItem("backgound-color");
       document.querySelector("p").style.color = localStorage.getItem("text-color");
-      document.querySelector("p").style.fontSize = localStorage.getItem("font-size");
-      document.querySelector("p").style.lineHeight = localStorage.getItem("line-spacing");
+      document.querySelector("p").style.fontSize = localStorage.getItem("font-size") + "px";
+      document.querySelector("p").style.lineHeight = localStorage.getItem("line-spacing") + "px";
       document.querySelector("p").style.fontFamily = localStorage.getItem("font-family");
     }
   </script>
