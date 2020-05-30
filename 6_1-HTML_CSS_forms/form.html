@@ -10,13 +10,13 @@
     <fieldset>
       <legend>Dados pessoais</legend>
       <div>
-        <label for="name">Nome:*</label><input type="text" name="name" id="name" required="required" maxlength="40" placeholder="Digite seu nome">
+        <label for="name" name="name">Nome:*</label><input type="text" name="name" id="name" required="required" maxlength="40" placeholder="Digite seu nome">
       </div>
       <div class="email">
         <label for="email">E-mail:*</label><input type="text" name="email" id="email" maxlength="50" required="required">
       </div>
       <div class="cpf">
-        <label for="cpf">CPF:*</label><input type="number" name="cpf" id="cpf" maxlength="1" required="required">
+        <label for="cpf">CPF:*</label><input type="text" name="cpf" id="cpf" maxlength="11" required="required">
       </div>
       <div>
         <label for="address">Endereço:*</label><input type="text" name="address" id="address" required="required">
@@ -29,8 +29,8 @@
       </div>
       <div>
         <p>Tipo:</p>
-        <input type="radio" name="tipo" id="home"><label for="home">Casa</label>
-        <input type="radio" name="tipo" id="apt"><label for="apt">Apartamento</label>
+        <input type="radio" name="tipo" id="home" value="Casa"><label for="home">Casa</label>
+        <input type="radio" name="tipo" id="apt" value="Apartamento"><label for="apt">Apartamento</label>
       </div>
     </fieldset>
     <fieldset>
@@ -42,7 +42,7 @@
         <label for="cargo">Cargo:*</label><input type="text" name="cargo" id="cargo" maxlength="40" required="required">
       </div>
       <div>
-        <label for="cargo-description">Descrição:*</label><input type="text" name="cargo" id="cargo-description" maxlength="500" required="required">
+        <label for="cargo-description">Descrição:*</label><input type="text" name="cargo-description" id="cargo-description" maxlength="500" required="required">
       </div>
       <div>
         <label for="start-date">Data de início:*</label><input type="text" name="start-date" id="start-date" required="required">
