@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form method="GET">
+    <fieldset>
+      <legend>Dados pessoais</legend>
+      <div>
+        <label for="name" name="name">Nome:*</label><input type="text" name="name" id="name" required="required" maxlength="40" placeholder="Digite seu nome">
+      </div>
+      <div class="email">
+        <label for="email">E-mail:*</label><input type="text" name="email" id="email" maxlength="50" required="required">
+      </div>
+      <div class="cpf">
+        <label for="cpf">CPF:*</label><input type="text" name="cpf" id="cpf" maxlength="11" required="required">
+      </div>
+      <div>
+        <label for="address">Endereço:*</label><input type="text" name="address" id="address" required="required">
+      </div>
+      <div>
+        <label for="city">Cidade:*</label><input type="text" name="city" id="city" required="required">
+      </div>
+      <div>
+        <label for="states">Estado:*</label><select name="states" id="states" required="required"></select>
+      </div>
+      <div>
+        <p>Tipo:</p>
+        <input type="radio" name="tipo" id="home" value="Casa"><label for="home">Casa</label>
+        <input type="radio" name="tipo" id="apt" value="Apartamento"><label for="apt">Apartamento</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Informações sobre último emprego</legend>
+      <div>
+        <label for="resume">Resumo do currículo:*</label><br><textarea name="resume" id="resume" maxlength="1000" required="required"></textarea>
+      </div>
+      <div>
+        <label for="cargo">Cargo:*</label><input type="text" name="cargo" id="cargo" maxlength="40" required="required">
+      </div>
+      <div>
+        <label for="cargo-description">Descrição:*</label><input type="text" name="cargo-description" id="cargo-description" maxlength="500" required="required">
+      </div>
+      <div>
+        <label for="start-date">Data de início:*</label><input type="text" name="start-date" id="start-date" required="required">
+      </div>
+      <button type="button" id="submit">Enviar</button>
+      <button type="button" id="clear">Limpar</button>
+    </fieldset>
+  </form>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
