@@ -16,6 +16,7 @@ const email = document.getElementById('email');
 const inputs = document.querySelectorAll('input');
 const options = document.querySelectorAll('options');
 const textareas = document.querySelectorAll('textarea');
+const labels = document.querySelectorAll('labels');
 
 sendButton.addEventListener('click', function (event) {
   if (!validateDate(date.value)) {
@@ -26,6 +27,7 @@ sendButton.addEventListener('click', function (event) {
     event.preventDefault();
     alert('Erro no email');
   }
+  //
 
 
   // create an object with the data
@@ -59,4 +61,16 @@ function validateEmail(email) {
   return email_regex.test(String(email).toLowerCase());
 }
 
-
+// clear button
+const clearButton = document.getElementById('clear');
+clearButton.addEventListener('click', function () {
+  for (let i = 0; i < inputs.length; i += 1) {
+    inputs[i].value = '';
+  }
+  for (let i = 0; i < options.length; i += 1) {
+    options[i].value = '';
+  }
+  for (let i = 0; i < textareas.length; i += 1) {
+    textareas[i].value = '';
+  }
+});
