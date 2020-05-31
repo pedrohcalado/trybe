@@ -4,53 +4,196 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 <body>
-  <form method="GET">
-    <fieldset>
-      <legend>Dados pessoais</legend>
-      <div>
-        <label for="name" name="name">Nome:*</label><input type="text" name="name" id="name" required="required" maxlength="40" placeholder="Digite seu nome">
+  <div class="section">
+    <div class="container">
+      <h1 class="title has-text-centered is-3">
+        Cadastro de currículo
+      </h1>
+      <hr>
+      <div class="control">
+        <h2 class="subtitle">
+          Dados pessoais
+        </h2>
       </div>
-      <div class="email">
-        <label for="email">E-mail:*</label><input type="text" name="email" id="email" maxlength="50" required="required">
-      </div>
-      <div class="cpf">
-        <label for="cpf">CPF:*</label><input type="text" name="cpf" id="cpf" maxlength="11" required="required">
-      </div>
-      <div>
-        <label for="address">Endereço:*</label><input type="text" name="address" id="address" required="required">
-      </div>
-      <div>
-        <label for="city">Cidade:*</label><input type="text" name="city" id="city" required="required">
-      </div>
-      <div>
-        <label for="states">Estado:*</label><select name="states" id="states" required="required"></select>
-      </div>
-      <div>
-        <p>Tipo:</p>
-        <input type="radio" name="tipo" id="home" value="Casa"><label for="home">Casa</label>
-        <input type="radio" name="tipo" id="apt" value="Apartamento"><label for="apt">Apartamento</label>
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>Informações sobre último emprego</legend>
-      <div>
-        <label for="resume">Resumo do currículo:*</label><br><textarea name="resume" id="resume" maxlength="1000" required="required"></textarea>
-      </div>
-      <div>
-        <label for="cargo">Cargo:*</label><input type="text" name="cargo" id="cargo" maxlength="40" required="required">
-      </div>
-      <div>
-        <label for="cargo-description">Descrição:*</label><input type="text" name="cargo-description" id="cargo-description" maxlength="500" required="required">
-      </div>
-      <div>
-        <label for="start-date">Data de início:*</label><input type="text" name="start-date" id="start-date" required="required">
-      </div>
-      <button type="button" id="submit">Enviar</button>
-      <button type="button" id="clear">Limpar</button>
-    </fieldset>
-  </form>
+    </div>
+    <div class="container">
+      <form method="GET">
+        <div class="field">
+          <label class="label">
+            Nome
+          </label>
+          <div class="control">
+            <input 
+                  class="input" 
+                  type="text" 
+                  placeholder="Digite seu nome"
+                  required="required"
+                  maxlength="40">
+          </div>
+        </div>
+        <div class="field">
+          <label for="email" class="label is-danger">
+            E-mail
+          </label>
+          <div class="control has-icons-left has-icons-right">
+            <input 
+                  class="input"
+                  id="email"
+                  type="text" 
+                  name="email"
+                  maxlength="50" 
+                  required="required">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-exclamation-triangle"></i>
+            </span>
+          </div>  
+        </div>
+        <div class="field">
+          <label for="cpf" class="label">
+            CPF
+          </label>
+          <div class="control">
+            <input
+                  class="input" 
+                  type="text" 
+                  name="cpf" 
+                  id="cpf" 
+                  maxlength="11" 
+                  required="required">
+          </div>
+        </div>
+        <div class="field">
+          <label for="address" class="label">
+            Endereço
+          </label>
+          <div class="control">
+            <input 
+                  class="input" 
+                  type="text" 
+                  name="address" 
+                  id="address" 
+                  required="required">
+          </div>
+        </div>
+        <div class="field">
+          <label for="city" class="label">
+            Cidade
+          </label>
+          <div class="control">
+            <input 
+                  class="input"
+                  type="text" 
+                  name="city" 
+                  id="city" 
+                  required="required">
+          </div>
+        </div>
+        <div class="field">
+          <label for="states" class="label">
+            Estado
+          </label>
+          <div class="control">
+            <select
+                  class="select" 
+                  name="states" 
+                  id="states" 
+                  required="required">
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="" class="label">
+            Tipo
+          </label>
+          <div class="control">
+            <label for="home" class="radio">
+              <input type="radio" name="tipo" id="home" value="Casa">
+              Casa
+            </label>
+            <label for="apt" class="radio">
+              <input type="radio" name="tipo" id="apt" value="Apartamento">
+              Apartamento
+            </label>
+          </div>
+        </div>
+        <hr>
+        <h2 class="subtitle">
+          Histórico profissional
+        </h2>
+        <div class="field">
+          <label for="resume" class="label">
+            Resumo do currículo
+          </label>
+          <div class="control">
+            <textarea 
+                    class="textarea"
+                    name="resume" 
+                    id="resume" 
+                    rows="5" 
+                    required="required"
+            ></textarea>
+          </div>
+        </div>
+        <div class="field">
+          <label for="cargo" class="label">
+            Cargo
+          </label>
+          <div class="control">
+            <input
+                  class="input"
+                  type="text"
+                  name="cargo"
+                  id="cargo"
+                  maxlength="40"
+                  required="required">
+          </div>
+        </div>
+        <div class="field">
+          <label for="cargo-description" class="label">
+            Descrição
+          </label>
+          <div class="control">
+            <input
+                  class="input"
+                  type="text"
+                  name="cargo-description"
+                  id="cargo-description"
+                  maxlength="500"
+                  required="required">
+          </div>
+        </div>
+        <div class="field">
+          <label for="start-date" class="label">
+            Data de início
+          </label>
+          <div class="control">
+            <input
+                  class="input"
+                  type="text"
+                  name="start-date"
+                  id="start-date"
+                  required="required">
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link" type="button" id="submit">Enviar</button>
+          </div>
+          <div class="control">
+            <button class="button is-link is-danger" type="button" id="clear">Limpar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
