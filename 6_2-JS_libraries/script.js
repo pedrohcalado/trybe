@@ -39,7 +39,7 @@ clearButton.addEventListener('click', function () {
 });
 
 // just-validate
-new window.JustValidate('.js-form', {
+new JustValidate('.js-form', {
   rules: {
     name: {
       required: true,
