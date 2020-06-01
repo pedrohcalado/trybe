@@ -6,7 +6,10 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+  <script src="./node_modules/just-validate/dist/js/just-validate.min.js"></script>
 </head>
 <body>
   <div class="section">
@@ -22,83 +25,75 @@
       </div>
     </div>
     <div class="container">
-      <form method="GET">
+      <form class="js-form" method="GET">
         <div class="field">
-          <label class="label">
-            Nome
+          <label for="name" class="name label">
+            Nome*
           </label>
           <div class="control">
             <input 
-                  class="input" 
-                  type="text" 
+                  class="input"
                   placeholder="Digite seu nome"
-                  required="required"
-                  maxlength="40">
+                  name="name"
+                  data-validate-field="name">
           </div>
         </div>
         <div class="field">
           <label for="email" class="label is-danger">
-            E-mail
+            E-mail*
           </label>
-          <div class="control has-icons-left has-icons-right">
-            <input 
+          <div class="control">
+            <input
                   class="input"
                   id="email"
-                  type="text" 
                   name="email"
-                  maxlength="50" 
-                  required="required">
-            <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
-            </span>
-            <span class="icon is-small is-right">
-              <i class="fas fa-exclamation-triangle"></i>
-            </span>
-          </div>  
+                  data-validate-field="email"
+                  placeholder="Digite seu e-mail">
+          </div>
         </div>
         <div class="field">
           <label for="cpf" class="label">
-            CPF
+            CPF*
           </label>
           <div class="control">
             <input
                   class="input" 
-                  type="text" 
+                  type="number" 
                   name="cpf" 
-                  id="cpf" 
-                  maxlength="11" 
-                  required="required">
+                  id="cpf"
+                  data-validate-field="cpf"
+                  placeholder="Digite seu CPF (somente números)">
           </div>
         </div>
         <div class="field">
           <label for="address" class="label">
-            Endereço
+            Endereço*
           </label>
           <div class="control">
             <input 
                   class="input" 
                   type="text" 
                   name="address" 
-                  id="address" 
-                  required="required">
+                  id="address"
+                  data-validate-field="address"
+                  placeholder="Digite seu endereço">
           </div>
         </div>
         <div class="field">
           <label for="city" class="label">
-            Cidade
+            Cidade*
           </label>
           <div class="control">
             <input 
                   class="input"
                   type="text" 
                   name="city" 
-                  id="city" 
-                  required="required">
+                  id="city">
           </div>
         </div>
         <div class="field">
           <label for="states" class="label">
-            Estado
+            Estado*
           </label>
           <div class="control">
             <select
@@ -111,15 +106,25 @@
         </div>
         <div class="field">
           <label for="" class="label">
-            Tipo
+            Tipo*
           </label>
           <div class="control">
             <label for="home" class="radio">
-              <input type="radio" name="tipo" id="home" value="Casa">
+              <input 
+                    type="radio"
+                    name="tipo"
+                    id="home"
+                    value="Casa"
+                    data-validate-field="tipo">
               Casa
             </label>
             <label for="apt" class="radio">
-              <input type="radio" name="tipo" id="apt" value="Apartamento">
+              <input 
+                    type="radio"
+                    name="tipo"
+                    id="apt"
+                    value="Apartamento"
+                    data-validate-field="tipo">
               Apartamento
             </label>
           </div>
@@ -130,21 +135,21 @@
         </h2>
         <div class="field">
           <label for="resume" class="label">
-            Resumo do currículo
+            Resumo do currículo*
           </label>
           <div class="control">
             <textarea 
                     class="textarea"
                     name="resume" 
                     id="resume" 
-                    rows="5" 
-                    required="required"
+                    rows="5"
+                    data-validate-field="resume"
             ></textarea>
           </div>
         </div>
         <div class="field">
           <label for="cargo" class="label">
-            Cargo
+            Cargo*
           </label>
           <div class="control">
             <input
@@ -152,13 +157,12 @@
                   type="text"
                   name="cargo"
                   id="cargo"
-                  maxlength="40"
-                  required="required">
+                  data-validate-field="cargo">
           </div>
         </div>
         <div class="field">
           <label for="cargo-description" class="label">
-            Descrição
+            Descrição*
           </label>
           <div class="control">
             <input
@@ -166,8 +170,7 @@
                   type="text"
                   name="cargo-description"
                   id="cargo-description"
-                  maxlength="500"
-                  required="required">
+                  data-validate-field="cargo-description">
           </div>
         </div>
         <div class="field">
@@ -176,16 +179,16 @@
           </label>
           <div class="control">
             <input
-                  class="input"
+                  id="datepicker"
+                  class="input start-date"
                   type="text"
                   name="start-date"
-                  id="start-date"
-                  required="required">
+                  data-validate-field="start-date">
           </div>
         </div>
         <div class="field is-grouped">
           <div class="control">
-            <button class="button is-link" type="button" id="submit">Enviar</button>
+            <button class="button is-link" type="submit" id="submit">Enviar</button>
           </div>
           <div class="control">
             <button class="button is-link is-danger" type="button" id="clear">Limpar</button>
@@ -195,5 +198,14 @@
     </div>
   </div>
   <script type="text/javascript" src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+  <script>
+    var picker = new Pikaday({
+      field: document.getElementById('datepicker'),
+      toString(date, format) { // using moment
+        return moment(date).format('DD/MM/YYYY');
+    }
+    });
+  </script>
 </body>
 </html>

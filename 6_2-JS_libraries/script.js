@@ -11,55 +11,18 @@ for (let i = 0; i < statesArray.length; i += 1) {
 
 // listen to the submit button
 const sendButton = document.getElementById('submit');
-const date = document.getElementById('start-date');
+const date = document.getElementById('datepicker');
 const email = document.getElementById('email');
 const inputs = document.querySelectorAll('input');
 const options = document.querySelectorAll('options');
 const textareas = document.querySelectorAll('textarea');
 const labels = document.querySelectorAll('labels');
 
-sendButton.addEventListener('click', function (event) {
-  if (!validateDate(date.value)) {
-    event.preventDefault();
-    alert('Erro na data');
-  }
-  if (!validateEmail(email.value)) {
-    event.preventDefault();
-    alert('Erro no email');
-  }
-  //
-
-
-  // create an object with the data
-  const dataConsolidated = {};
-  for (let i = 0; i < inputs.length; i += 1) {
-    dataConsolidated[inputs[i].name] = inputs[i].value;
-  }
-  for (let i = 0; i < options.length; i += 1) {
-    dataConsolidated[options[i].name] = options[i].value;
-  }
-  for (let i = 0; i < textareas.length; i += 1) {
-    dataConsolidated[textareas[i].name] = textareas[i].value;
-  }
-  sessionStorage.setItem('data', JSON.stringify(dataConsolidated));
+// date
+date.addEventListener('change', function () {
+  date.innerHTML = picker._o.field.value;
+  console.log(picker._o.field.value);
 })
-
-// create div with consolidated information
-window.onload = function () {
-  console.log(JSON.parse(sessionStorage.getItem('data')));
-}
-
-// validate date format
-function validateDate (date) {
-  const date_regex = /^(0[1-9]|1\d|2\d|3[0-1])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/;
-  return (date_regex.test(date));
-}
-
-// validate email format
-function validateEmail(email) {
-  const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return email_regex.test(String(email).toLowerCase());
-}
 
 // clear button
 const clearButton = document.getElementById('clear');
@@ -72,5 +35,76 @@ clearButton.addEventListener('click', function () {
   }
   for (let i = 0; i < textareas.length; i += 1) {
     textareas[i].value = '';
+  }
+});
+
+// just-validate
+new window.JustValidate('.js-form', {
+  rules: {
+    name: {
+      required: true,
+      maxLength: 30
+    },
+    cpf: {
+      required: true,
+      maxLength: 11
+    },
+    address: {
+      required: true,
+      maxLength: 50
+    },
+    tipo: {
+      required: true
+    },
+    resume: {
+      required: true
+    },
+    cargo: {
+      required: true,
+      maxLength: 40
+    },
+    'cargo-description': {
+      required: true,
+      maxLength: 500
+    },
+    'start-date': {
+      required: true
+    }
+  },
+  messages: {
+    name: {
+      minLength: 'Este campo deve conter no mínimo 3 caracteres',
+      maxLength: 'Este campo deve conter no máximo 30 caracteres',
+      required: 'Campo obrigatório'
+    },
+    email: {
+      required: 'Campo obrigatório',
+      email: 'Por favor, digite um e-mail válido'
+    },
+    cpf: {
+      required: 'Campo obrigatório',
+      maxLength: 'Nº máximo de caracteres: 11'
+    },
+    address: {
+      required: 'Campo obrigatório',
+      maxLength: 'Nº máximo de caracteres: 50'
+    },
+    tipo: {
+      required: 'Campo obrigatório'
+    },
+    resume: {
+      required: 'Campo obrigatório'
+    },
+    cargo: {
+      required: 'Campo obrigatório',
+      maxLength: 'Nº máximo de caracteres: 40'
+    },
+    'cargo-description': {
+      required: 'Campo obrigatório',
+      maxLength: 'Nº máximo de caracteres: 500'
+    },
+    'start-date': {
+      required: 'Campo obrigatório'
+    }
   }
 });
