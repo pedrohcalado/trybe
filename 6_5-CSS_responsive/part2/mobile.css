@@ -22,6 +22,6 @@
   }
 
   .content {
-    background: rgb(165, 165, 165);
+    background: linear-gradient(to bottom, #669999, #333300);
   }
 }
