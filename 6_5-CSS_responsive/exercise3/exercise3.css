@@ -80,3 +80,18 @@
   padding: 20px;
   height: 1%;
 }
+
+@media print {
+  #header, #navigation, #footer {
+    display: none;
+  }
+
+  #content {
+    float: none;
+  }
+
+  #aside {
+    float: none;
+    display: block;
+  }
+}
