@@ -41,3 +41,9 @@ const students = () => {
   }
   return count;
 }
+
+// 7. Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto.
+const keyNumber = (object, k) => Object.values(object)[k];
+
+// 8. Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave
+const existsKVPair = (object, k, v) => {return (object[k] == v)};
