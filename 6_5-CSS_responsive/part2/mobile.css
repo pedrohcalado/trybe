@@ -1,0 +1,27 @@
+.center {
+  width: 100vw;
+}
+
+.top {
+  background: rgb(5, 63, 10);
+}
+
+.content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.left, .right {
+  height: 50%;
+  width: 100%;
+}
+
+@media only screen and (orientation: landscape) {
+  .top {
+    background: gray;
+  }
+
+  .content {
+    background: linear-gradient(to bottom, #669999, #333300);
+  }
+}
