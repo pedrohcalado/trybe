@@ -44,13 +44,13 @@ The program comprises 1.500 hours of on campus and online classes and addresses 
 - [x] 6-2: *JavaScript libraries and CSS frameworks*
 - [x] 6-3: *CSS Flexbox - Part 1*
 - [x] 6-4: *CSS Flexbox - Part 2*
-- [ ] 6-5: *CSS Responsive - Mobile First*
-- [ ] 6-6: *[Project - XXX]()*
+- [x] 6-5: *CSS Responsive - Mobile First*
+- [x] 6-6: *[Project - Facebook log In Page]()*
 ##### Block 7: JavaScript ES6 & Unit Tests
-- [ ] 7-1: *JavaScript ES6 - let, const, arrow functions and template literals*
-- [ ] 7-2: *JavaScript ES6 - Objects*
-- [ ] 7-3: *JavaScript unit tests*
-- [ ] 7-4: *Testing in small steps*
+- [x] 7-1: *JavaScript ES6 - let, const, arrow functions and template literals*
+- [x] 7-2: *JavaScript ES6 - Objects*
+- [x] 7-3: *JavaScript unit tests*
+- [x] 7-4: *Testing in small steps*
 - [ ] 7-5: *[Project - JavaScript Unit Tests]()*
 ##### Block 8: JavaScript ES6
 - [ ] 8-1: *JavaScript ES6 - Higher Order Functions - forEach, find, filter, some, every, sort*
@@ -150,10 +150,4 @@ The program comprises 1.500 hours of on campus and online classes and addresses 
 - [ ] 29-3: *Web architecture - Rest and Restful*
 - [ ] 29-4: *[Project - Online Store with JWT]()*
 
-## Infrastructures :hourglass_flowing_sand:
-##### Block 30: Introduction - Deploy
-- [ ] 30-1: *Infrastructure - Deploy with Heroku*
-- [ ] 30-2: *Deploy - Process Managers*
-- [ ] 30-3: *[Project - Stranger Things]()*
-##### Block 31: Software Architecture
 # [...]
