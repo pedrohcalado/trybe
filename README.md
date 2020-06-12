@@ -1,5 +1,5 @@
 # What is this all about?
-Exercises and [Projects](https://pedrohcalado.github.io/) made during my full stack web development course at Trybe in Belo Horizonte, Brazil.
+Exercises and Projects made during my full stack web development course at Trybe in Belo Horizonte, Brazil.
 
 # About Trybe
 Trybe is a school of the future that was founded with the purpose of generating significant opportunities for anyone who wants to improve their lives and build a successful career in technology. Making a genuine commitment to people, students only start paying when they get a good job.
@@ -21,7 +21,7 @@ The program comprises 1.500 hours of on campus and online classes and addresses 
 - [x] 3-2: *HTML & CSS - Getting Started with CSS*
 - [x] 3-3: *HTML & CSS - Selectors and positioning*
 - [x] 3-4: *Semantic HTML*
-- [x] 3-5: *[Project - HTML & CSS]()*
+- [x] 3-5: *Project - HTML & CSS
 ##### Block 4: Introduction - JavaScript
 - [x] 4-1: *JavaScript - Getting Started*
 - [x] 4-2: *JavaScript - For Array and Loop*
@@ -32,11 +32,11 @@ The program comprises 1.500 hours of on campus and online classes and addresses 
 - [x] 4-7: *JavaScript - Events*
 - [x] 4-8: *JavaScript - Web Storage*
 ##### Block 5: Introduction - JavaScript - Projects
-- [x] 5-1: *[Project - Meme Generator]()*
-- [x] 5-2: *[Project - Art with Pixels]()*
-- [x] 5-3: *[Project - To Do List]()*
-- [x] 5-4: *[Project - Guess the Color]()*
-- [x] 5-5: *[Project - Mysterious Card]()*
+- [x] 5-1: *[Project - Meme Generator](https://pedrohcalado.github.io/projects/meme-generator/index.html)*
+- [x] 5-2: *[Project - Art with Pixels](https://pedrohcalado.github.io/projects/make-me-an-artist/index.html)*
+- [x] 5-3: *[Project - To Do List](https://pedrohcalado.github.io/projects/to-do-list/index.html)*
+- [x] 5-4: *[Project - Guess the Color](https://pedrohcalado.github.io/projects/color-guess/index.html)*
+- [x] 5-5: *[Project - Mysterious Card](https://pedrohcalado.github.io/projects/mistery-letter/index.html)*
 
 ## Front-end development :hourglass_flowing_sand:
 ##### Block 6: Introduction - Front-end
