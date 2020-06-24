@@ -68,11 +68,11 @@ function myFizzBuzz(num) {
 
 // 7 - Teste se uma variável foi definida
 
-const thereIs = '';
+const thereIsV = '';
 
 // 8 - Teste se uma função foi definida 
 
-function thereIs() {}
+function thereIsF() {}
 
 // 10 - Compare dois objetos (JSON) para verificar se são idênticos ou não
 
@@ -125,7 +125,8 @@ module.exports = {
   myRemove,
   myRemoveWithoutCopy,
   myFizzBuzz,
-  thereIs,
+  thereIsF,
+  thereIsV,
   obj1,
   obj2,
   obj3,
