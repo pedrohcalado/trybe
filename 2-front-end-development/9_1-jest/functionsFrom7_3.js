@@ -72,7 +72,7 @@ const thereIsV = '';
 
 // 8 - Teste se uma função foi definida 
 
-function thereIsF() {}
+function thereIsF(){}
 
 // 10 - Compare dois objetos (JSON) para verificar se são idênticos ou não
 
@@ -94,7 +94,7 @@ const obj3 = {
 // 11 - Faça o teste de uma função que compara dois números e retorna true se o primeiro for maior que o segundo e false caso contrário.
 
 function isAbove(num1, num2) {
-  return num1 > num2;
+  return (typeof num1 !== 'number' || typeof num2 !== 'number') ? false : num1 > num2;
 }
 
 // bonus1 - 

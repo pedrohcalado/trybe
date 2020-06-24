@@ -1,7 +1,6 @@
 const functions = require('./functionsFrom7_3');
 // const { describe } = require('yargs');
 
-
 describe('Exercise 1', () => {
   test('The sum of 4 and 5 must be 9', () => {
     expect(functions.sum(4, 5)).toBe(9);
@@ -94,5 +93,47 @@ describe('Exercise 7', () => {
 describe('Exercise 8', () => {
   it('The function was not defined', () => {
     expect(typeof functions.thereIsF).toBe('function');
+  });
+});
+
+describe('Exercise 10', () => {
+  it('The objects are not deep equal', () => {
+    expect(functions.obj1).toEqual(functions.obj2);
+  });
+  it('The objects should not be the same', () => {
+    expect(functions.obj1).not.toEqual(functions.obj3);
+  });
+});
+
+describe('Exercise 11', () => {
+  test('The function isAbove should exist', () => {
+    expect(typeof functions.isAbove).toBe('function');
+  })
+  test('The function isAbove should exist', () => {
+    expect(functions.isAbove).toBeDefined();
+  })
+  test('The result should be true', () => {
+    expect(functions.isAbove(2, 1)).toBeTruthy();
+  })
+  test('The result should be false', () => {
+    expect(functions.isAbove(1, 2)).toBeFalsy();
+  })
+  test('THe result should be false', () => {
+    expect(functions.isAbove(1, 1)).toBeFalsy();
+  })
+  test('The result should be true', () => {
+    expect(functions.isAbove(-1, -21)).toBeTruthy();
+  })
+  test('The result should be true', () => {
+    expect(functions.isAbove(0.2, 0.1)).toBeTruthy();
+  });
+  test('The parameters should be numbers, result must be false', () => {
+    expect(functions.isAbove('-1', -21)).toBeFalsy();
+  });
+  test('The parameters should be numbers, result must be false', () => {
+    expect(functions.isAbove('abc', -21)).toBeFalsy;
+  })
+  test('The parameters should be numbers, result must be false', () => {
+    expect(functions.isAbove('abc', 'a')).toBeFalsy()
   })
 })
