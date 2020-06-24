@@ -8,7 +8,11 @@
 //   palindrome("abcdefg") === false
 
 function palindrome(str) {
-
+  let pal = '';
+  for (let i = str.length - 1; i >= 0; i -= 1) {
+    pal += str[i];
+  }
+  return (pal === str);
 }
 
 module.exports = palindrome;
