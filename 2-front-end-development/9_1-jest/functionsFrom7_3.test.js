@@ -137,3 +137,23 @@ describe('Exercise 11', () => {
     expect(functions.isAbove('abc', 'a')).toBeFalsy()
   })
 })
+
+describe('Exercise bonus 1', () => {
+  it('The result should be an empty array', () => {
+    expect(functions.getChange(1, 1)).toEqual([]);
+  });
+  it('Expect an array containing [50, 20, 10, 5]', () => {
+    expect(functions.getChange(215, 300)).toEqual([50, 20, 10, 5]);
+  })
+  it('Expect an array containing [100, 10, 2, 2]', () => {
+    expect(functions.getChange(486, 600)).toEqual([100, 10, 2, 2]);
+  })
+  it('Expect an array containg [200, 100, 50, 20, 10, 5, 2, 1]', () => {
+    expect(functions.getChange(12, 400)).toEqual([200, 100, 50, 20, 10, 5, 2, 1]);
+  });
+  it("Throw an error with the message 'paid value is not enough'", () => {
+    expect(() => {
+      functions.getChange(100, 10)
+    }).toThrow(Error('paid value is not enough'));
+  })
+})
