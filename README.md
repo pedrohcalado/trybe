@@ -51,15 +51,15 @@ The program comprises 1.500 hours of on campus and online classes and addresses 
 - [x] 7-2: *JavaScript ES6 - Objects*
 - [x] 7-3: *JavaScript unit tests*
 - [x] 7-4: *Testing in small steps*
-- [ ] 7-5: *[Project - JavaScript Unit Tests]()*
+- [x] 7-5: *[Project - JavaScript Unit Tests]()*
 ##### Block 8: JavaScript ES6
-- [ ] 8-1: *JavaScript ES6 - Higher Order Functions - forEach, find, filter, some, every, sort*
-- [ ] 8-2: *JavaScript ES6 - Higher Order Functions - map and reduce*
-- [ ] 8-3: *JavaScript ES6 - spread operator, rest parameter, destructuring and more*
-- [ ] 8-4: *[Project - Zoo functions]()*
+- [x] 8-1: *JavaScript ES6 - Higher Order Functions - forEach, find, filter, some, every, sort*
+- [x] 8-2: *JavaScript ES6 - Higher Order Functions - map and reduce*
+- [x] 8-3: *JavaScript ES6 - spread operator, rest parameter, destructuring and more*
+- [x] 8-4: *[Project - Zoo functions]()*
 ##### Block 9: Asynchronicity & Callbacks
-- [ ] 9-1: *First steps at Jest*
-- [ ] 9-2: *Asynchronous JavaScript and Callbacks*
+- [x] 9-1: *First steps at Jest*
+- [x] 9-2: *Asynchronous JavaScript and Callbacks*
 - [ ] 9-3: *JavaScript Promises*
 - [ ] 9-4: *[Project - Shopping Cart]()*
 ##### Block 10: Jest
