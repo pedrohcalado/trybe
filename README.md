@@ -60,15 +60,15 @@ The program comprises 1.500 hours of on campus and online classes and addresses 
 ##### Block 9: Asynchronicity & Callbacks
 - [x] 9-1: *First steps at Jest*
 - [x] 9-2: *Asynchronous JavaScript and Callbacks*
-- [ ] 9-3: *JavaScript Promises*
-- [ ] 9-4: *[Project - Shopping Cart]()*
+- [x] 9-3: *JavaScript Promises*
+- [x] 9-4: *[Project - Shopping Cart]()*
 ##### Block 10: Jest
-- [ ] 10-1: *Jest - Asynchronous Tests*
-- [ ] 10-2: *Jest - Simulating behaviors*
-- [ ] 10-3: *[Project - Asynchronous Jest and Mocking](#)*
+- [x] 10-1: *Jest - Asynchronous Tests*
+- [x] 10-2: *Jest - Simulating behaviors*
+- [x] 10-3: *[Project - Asynchronous Jest and Mocking](#)*
 ##### Block 11: Introduction - React
-- [ ] 11-1: *'Hello, world!' in React!*
-- [ ] 11-2: *React Components*
+- [x] 11-1: *'Hello, world!' in React!*
+- [x] 11-2: *React Components*
 - [ ] 11-3: *[Project - Movie Cards Library]()*
 ##### Block 12: React
 - [ ] 12-1: *Components with status*
