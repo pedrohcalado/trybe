@@ -1,26 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Forms from './Forms';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'dd',
+    }
+    this.handleValue = this.handleValue.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleValue() {
+    return this.state.name;
+  }
+
+  handleChange(event) {
+    this.setState({
+      name: event.target.value
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h1>My first React form</h1>
+        <form>
+          <fieldset>
+            <Forms />
+          </fieldset>
+          <fieldset>
+
+          </fieldset>
+        </form>
+      </div>
+    );
+  }
+  
 }
 
 export default App;
