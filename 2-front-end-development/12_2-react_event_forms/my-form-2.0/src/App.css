@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -28,9 +28,10 @@
   color: #61dafb;
 }
 
-label {
+label, select {
   display: block;
   margin: 15px;
+  text-align: left;
 }
 
 
