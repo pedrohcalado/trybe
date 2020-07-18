@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import MyList from './MyList';
+import ShowButton from './ShowButton';
+import Pictures from './Pictures';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      title: 'Minha Lista de Componentes',
+    }
+  }
+
+  changeTitle = (value) => {
+    this.setState({ title: value })
+  }
+
+  render() {
+    return (
+      <div className='main'>
+        <h1>{this.state.title}</h1>
+        <MyList>
+          <li>SUPIMPA</li>
+          SUPIMPA 2.0 - Melhor palavra!
+          <ShowButton changeTitle={this.changeTitle} value='Título Show' />
+        </MyList>
+        <Pictures
+          height={200}
+          src="https://course.betrybe.com/images/logo_white.png"
+          alt="Logo da Trybe"
+          legenda="Lista feita na Trybe"
+          style={{'backgroundColor':'black'}}
+        />
+      </div>
+    )
+  }
 }
-
 export default App;
