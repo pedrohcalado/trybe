@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/2-front-end-development/12_2-react_event_forms/my-form-2.0/node_modules/yargs/node_modules
 /.pnp
 .pnp.js
 
