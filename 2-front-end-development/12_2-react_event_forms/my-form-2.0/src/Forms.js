@@ -4,6 +4,7 @@ import Button from './Button';
 import ComboBox from './ComboBox';
 import RadioButton from './RadioButton';
 import TextArea from './TextArea';
+import GeneralInfos from './GeneralInfos';
 
 class Forms extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class Forms extends Component {
       roleDescriptionInput: '',
       roleInput: '',
       alertedAlready: false,
+      display: 'none',
     }
   }
 
@@ -74,6 +76,35 @@ class Forms extends Component {
     }
   }
 
+  handleClick = (event) => {
+    const { value } = event.target;
+    switch(value) {
+      case('Enviar'):
+        this.setState({
+          display: 'block',
+        })
+        break;
+      case('Limpar'):
+        this.setState({
+          nameInput: '',
+          emailInput: '',
+          cpfInput: '',
+          addressInput: '',
+          cityInput: '',
+          stateInput: '',
+          kindInput: '',
+          resumeInput: '',
+          roleDescriptionInput: '',
+          roleInput: '',
+          alertedAlready: false,
+          display: 'none',
+        })
+        break;
+      default:
+        return false
+    }
+  }
+
   render() {
     return(
       <div>
@@ -94,8 +125,10 @@ class Forms extends Component {
             <TextArea label={'Cargo'} name={'roleInput'} type={'text'} maxLength={40} onChange={this.handleInput} onMouseEnter={this.handleMouseEnter} value={this.state.holeInput}/>
             <Input label={'Descrição do cargo'} name={'roleDescriptionInput'} type={'text'} maxLength={500} onChange={this.handleInput} value={this.state.roleDescriptionInput} />
           </fieldset>
-          <Button type={'button'} label={'Send'} />
+          <Button value={'Enviar'} type={'button'} label={'Enviar'} onClick={this.handleClick} />
+          <Button value={'Limpar'} type={'button'} label={'Limpar'} onClick={this.handleClick}/>
         </form>
+        <GeneralInfos style={{display: this.state.display}} name={this.state.nameInput} email={this.state.emailInput} cpf={this.state.cpfInput} address={this.state.addressInput} city={this.state.cityInput} state={this.state.stateInput} kind={this.state.kindInput} resume={this.state.resumeInput} roleDescription={this.state.roleDescriptionInput} role={this.state.roleInput} />
       </div>
     );
   }

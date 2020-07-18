@@ -3,9 +3,9 @@ import React from 'react';
 class Button extends React.Component {
   
   render() {
-    const { type, label } = this.props;
+    const { value, type, label, onClick } = this.props;
     return (
-      <button type={type}>{label}</button>
+      <button value={value} type={type} onClick={onClick}>{label}</button>
     );
   }
 }
