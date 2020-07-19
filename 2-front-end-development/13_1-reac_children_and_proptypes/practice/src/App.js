@@ -26,12 +26,15 @@ class App extends Component {
           <ShowButton changeTitle={this.changeTitle} value='Título Show' />
         </MyList>
         <Pictures
-          height={200}
+          // height={100}
           src="https://course.betrybe.com/images/logo_white.png"
-          alt="Logo da Trybe"
+          alt="Logo trybe"
           legenda="Lista feita na Trybe"
           style={{'backgroundColor':'black'}}
-        />
+          children='HAHA'
+        >
+          {'ola'}
+          </Pictures>
       </div>
     )
   }
