@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Button from './Button';
-// import Alert from './Alert'
+import Alert from './Alert'
 
 class App extends Component {
   constructor(props) {
@@ -39,5 +39,6 @@ class App extends Component {
     )
   }
 }
+
 
 export default App;
