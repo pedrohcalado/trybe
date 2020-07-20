@@ -31,10 +31,10 @@ class App extends Component {
         <Button content="Clique aqui" isDisable={this.state.isDisableButton} showComponent={this.changeShowComponent} value='Título Show' />
         {this.state.showModal &&
           <Alert
-            hideComponent={this.changeShowComponent}
-            contentTitle="Modal"
-            content="Coloque qualquer coisa aqui."
-          />}
+            hideComponent={this.changeShowComponent}>
+            {{title: "Algum título", content: "Algum conteúdoooo", timeSeconds: 3000 }}
+          </Alert>
+        }
       </div>
     )
   }
