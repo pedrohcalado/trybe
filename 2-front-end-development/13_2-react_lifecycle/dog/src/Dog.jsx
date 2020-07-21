@@ -6,20 +6,28 @@ class Dog extends React.Component {
     super(props);
     this.state = {
       imageUrl: '',
-      isLoaded: true
+      isLoaded: true,
+      isTerrier: false,
     }
   }
 
-  getDog = () => {
+  getDog = async () => {
     this.setState({
       isLoaded: true,
     })
-    fetch("https://dog.ceo/api/breeds/image/random", {method: 'GET'})
+    await fetch("https://dog.ceo/api/breeds/image/random", {method: 'GET'})
       .then(response => response.json())
-      .then(data => 
+      .then(data =>
+        (data.message.includes('terrier')) ?
+        this.setState({
+          isLoaded: false,
+          imageUrl: data.message,
+          isTerrier: true,
+        }) :
         this.setState({
           imageUrl: data.message,
           isLoaded: false,
+          isTerrier: false,
         })
         )
       .catch(error => console.log(error))
@@ -27,20 +35,17 @@ class Dog extends React.Component {
 
   componentDidMount() {
     console.log('did mount1')
-    fetch("https://dog.ceo/api/breeds/image/random", {method: 'GET'})
-      .then(response => response.json())
-      .then(data => 
-        this.setState({
-          imageUrl: data.message,
-          isLoaded: false,
-        })
-        )
-      .catch(error => console.log(error))
-    console.log('did mount2')
+    this.getDog();
+    console.log('did mount2');
   }
 
   componentWillUpdate() {
     console.log('will uptade')
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem('dogUrl', this.state.imageUrl);
+    // if(!this.state.isLoaded) alert(this.state.imageUrl.split('/')[4])
   }
 
   render() {
@@ -48,8 +53,10 @@ class Dog extends React.Component {
     return(
       <div>
         {this.state.isLoaded && <p>Loading...</p>}
-        {!this.state.isLoaded && <img src={this.state.imageUrl} alt="dog" />}
+        {!this.state.isLoaded && !this.state.isTerrier && <img src={this.state.imageUrl} alt="dog" />}
         <div><button onClick={this.getDog}>Change dog</button></div>
+        <h2>{this.state.imageUrl}</h2>
+        {this.state.isTerrier && <h2>It's a terrier</h2>}
       </div>
     );
   }
