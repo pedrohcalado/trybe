@@ -8,6 +8,8 @@ class Dog extends React.Component {
       imageUrl: '',
       isLoaded: true,
       isTerrier: false,
+      dogInput: '',
+      dog: [],
     }
   }
 
@@ -34,26 +36,62 @@ class Dog extends React.Component {
   }
 
   componentDidMount() {
-    console.log('did mount1')
+    const dogs = JSON.parse(localStorage.getItem('dogName2'));
+    // console.log(dogs[dogs.length - 1])
+    dogs[0] !== undefined ?
+    this.setState({
+      imageUrl: dogs[dogs.length - 1].dogUrl,
+      isLoaded: false,
+      isTerrier: false,
+      dogInput: '',
+      
+    }) :
     this.getDog();
-    console.log('did mount2');
   }
 
-  componentWillUpdate() {
-    console.log('will uptade')
+  componentWillMount() {
+    return localStorage.getItem('dogName') === '[]' ?
+    false :
+    localStorage.setItem('dogName2', localStorage.getItem('dogName'));
   }
 
   componentDidUpdate() {
     localStorage.setItem('dogUrl', this.state.imageUrl);
+    localStorage.setItem('dogName', JSON.stringify(this.state.dog));
     // if(!this.state.isLoaded) alert(this.state.imageUrl.split('/')[4])
   }
 
+  handleClick = async () => {
+    await this.setState({
+      dog: [
+        ...this.state.dog,
+        {
+        dogName: this.state.dogInput,
+        dogUrl: this.state.imageUrl,
+        }
+      ]
+    })
+    alert('Nome salvo');
+  }
+
+  handleInput = (event) => {
+    const { value } = event.target;
+    this.setState({
+      dogInput: value,
+    });
+  }
+
   render() {
-    console.log('render')
     return(
       <div>
         {this.state.isLoaded && <p>Loading...</p>}
         {!this.state.isLoaded && !this.state.isTerrier && <img src={this.state.imageUrl} alt="dog" />}
+        <div>
+          <label htmlFor="name">Give your dog a name: 
+            <input onChange={this.handleInput} name={this.state.dog.dogName} />
+          </label>
+          <button type='button' onClick={this.handleClick}>Save the name of your catioro</button>
+        </div>
         <div><button onClick={this.getDog}>Change dog</button></div>
         <h2>{this.state.imageUrl}</h2>
         {this.state.isTerrier && <h2>It's a terrier</h2>}
