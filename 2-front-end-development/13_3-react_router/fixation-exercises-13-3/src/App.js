@@ -7,7 +7,7 @@ import {
   BrowserRouter,
   Link,
   Route,
-  Switch
+  Switch,
  } from 'react-router-dom';
 
 class App extends Component {
@@ -19,7 +19,11 @@ class App extends Component {
         <Link to="/users">Users</Link>
         <Switch>
           <Route path="/about" component={About} />
-          <Route path="/users" component={Users} />
+          <Route path="/users/:id" component={() => <Users greetingMessage="Good Morning" />}  />
+          {/* <Route path="/users/:id" render={(props) => <Users greetingMessage="Good morning" />} /> */}
+          {/* <Route path="/users/:id">
+            <Users greetingMessage="Good Morning"/>
+          </Route> */}
           <Route exact path="/" component={Home} />
         </Switch>
       </BrowserRouter>

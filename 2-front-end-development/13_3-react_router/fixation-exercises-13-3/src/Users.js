@@ -1,11 +1,10 @@
-
-// arquivo Users.js
 import React from 'react';
 
-const Users = () => (
+const Users = ({ match, greetingMessage }) => console.log(match) || (
   <div>
     <h2> Users </h2>
-    <p> My awesome Users component </p>
+    <p> {greetingMessage}, this is my awesome Users component </p>
+    {match && <p>The id is {match.params.id}</p>}
   </div>
 );
 
