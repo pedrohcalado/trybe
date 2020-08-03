@@ -1,0 +1,31 @@
+h1 {
+  text-align: center;
+}
+.main-container {
+  align-content: stretch;
+  text-align: center;
+  display: flex;
+  font-size: 15px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 60%;
+}
+
+li {
+  list-style: none;
+}
+
+.Container {
+  border: 1px solid black;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  min-width: 250px;
+}
+
+button {
+  display: block;
+  margin: auto;
+}
