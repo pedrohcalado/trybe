@@ -1,0 +1,86 @@
+h1 , h3 , h4 {
+  text-align: center;
+}
+
+
+.details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main-container {
+  align-content: stretch;
+  text-align: center;
+  display: flex;
+  font-size: 15px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 70px auto;
+  width: 60%;
+}
+
+li {
+  list-style: none;
+}
+
+.ContainerDetails {
+  border: 1px solid black;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.Container {
+  border: 1px solid black;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px auto;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+button {
+  display: block;
+  margin: auto;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px auto;
+  width: 40%;
+}
+
+.location {
+  display: flex;
+  justify-content: space-around;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  width: 20%;
+}
+
+.pokedexImg {
+  text-align: center;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 60%;
+}
