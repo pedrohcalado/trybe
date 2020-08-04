@@ -2,7 +2,11 @@ import React from 'react';
 import './App.css';
 import Pokedex from './Pokedex';
 import { PokeButton, TypeButton } from './PokeButton';
+import PokemonDetails from './PokemonDetails';
+import Erro from './Erro';
+import About from './About.js';
 import pokemons from './data';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,13 +16,11 @@ class App extends React.Component {
       counter: 0,
       type: 'All',
     }
+    this.mainPage = this.mainPage.bind(this);
   }
 
   changeCounter = () => {
     const filteredPokemons = pokemons.filter(pokemon => ['All', pokemon.type].includes(this.state.type));
-    // console.log(this.state.counter)
-    // console.log(this.state.type)
-
     return (this.state.counter === filteredPokemons.length - 1) ?
     this.setState(() => ({
       counter: 0,
@@ -35,10 +37,9 @@ class App extends React.Component {
     }))
   }
 
-  render() {
+  mainPage() {
     return (
       <div className="App">
-        <h1>Pokedex</h1>
         <div className='main-container'>
           <Pokedex index={this.state.counter} type={this.state.type} />
         </div>
@@ -56,6 +57,27 @@ class App extends React.Component {
           <PokeButton clickHandler={this.changeCounter}/>
         </div>
       </div>
+    );
+  }
+
+  render() {
+    return (
+      <BrowserRouter>
+        <div>
+          <h1>Pokedex</h1>
+          <div className="links">
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+          </div>
+        </div>
+        <Switch>
+          <Route path="/pokemons/:id" render={(props) => <PokemonDetails {...props} pokemons={pokemons} />} />
+          <Route path="/about" component={About} />
+          <Route path="/:error" component={Erro} />
+          <Route exact path="/" component={this.mainPage} />
+        </Switch>
+      </BrowserRouter>
+      
     );
   }
 }
