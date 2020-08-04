@@ -41,7 +41,6 @@ class App extends React.Component {
         <h1>Pokedex</h1>
         <div className='main-container'>
           <Pokedex index={this.state.counter} type={this.state.type} />
-          <PokeButton clickHandler={this.changeCounter}/>
         </div>
         <div className='buttons-container'>
           <TypeButton clickHandler={this.changeType} label='Fire' />
@@ -52,6 +51,9 @@ class App extends React.Component {
           <TypeButton clickHandler={this.changeType} label='Normal' />
           <TypeButton clickHandler={this.changeType} label='Dragon' />
           <TypeButton clickHandler={this.changeType} label='All' />
+        </div>
+        <div>
+          <PokeButton clickHandler={this.changeCounter}/>
         </div>
       </div>
     );

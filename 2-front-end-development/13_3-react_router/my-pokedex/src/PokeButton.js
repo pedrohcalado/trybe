@@ -11,9 +11,11 @@ class PokeButton extends React.Component {
 class TypeButton extends React.Component {
   render() {
     return (
-      <button onClick={() => {
+      <div className="type">
+        <button onClick={() => {
         this.props.clickHandler(this.props.label)
-      }}>{this.props.label}</button>
+        }}>{this.props.label}</button>
+      </div>
     );
   }
 }

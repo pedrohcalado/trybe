@@ -8,7 +8,7 @@ h1 {
   font-size: 15px;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: auto;
+  margin: 70px auto;
   width: 60%;
 }
 
@@ -28,4 +28,11 @@ li {
 button {
   display: block;
   margin: auto;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px auto;
+  width: 40%;
 }
