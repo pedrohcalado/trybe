@@ -1,7 +1,48 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 
-export const About = () => <h1>Você está na página Sobre</h1>;
+export class About extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      nome: '',
+      email: '',
+    };
+  }
+
+  handleInput(e) {
+    const { name, value } = e.target;
+    console.log(name, value);
+    this.setState({ [name]: value });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Você está na página Sobre</h1>
+        <p>
+          Nome:
+          <input
+            onChange={(e) => this.handleInput(e)}
+            name='nome'
+            value={this.state.nome}
+            data-testid='input-nome'
+          />
+        </p>
+        <p>
+          E-mail:
+          <input
+            onChange={(e) => this.handleInput(e)}
+            name='email'
+            value={this.state.email}
+            data-testid='input-email'
+          />
+        </p>
+      </div>
+    );
+  }
+}
+
 export const Home = () => <h1>Você está na página Início</h1>;
 export const NoMatch = () => <h1>Página não encontrada</h1>;
 
