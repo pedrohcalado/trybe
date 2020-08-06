@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+  <input placeholder="inclua valor de soma" id="valor-soma" />
+  <button id="SOMA">Soma</button>
+  <h2>Valor da operation:</h2>
+  <p>0</p>
+  <h2>Número de clicks:</h2>
+  <h1>0</h1>
+  <button id="SUBTRAI">Subtrai</button>
+  <button id="ADD-TEN">SOMA 10</button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
+  <script>
+    
+
+
+    document.getElementById('SOMA').addEventListener('click', () => {
+      return store.dispatch({
+        type: 'SOMA',
+        value: 0,
+        clickCount: 1,
+        
+      })
+    });
+
+    document.getElementById('SUBTRAI').addEventListener('click', () => {
+      return store.dispatch({
+        type: 'SUBTRAI',
+        value: 1,
+        clickCount: 1,
+        numbers: [-1],
+      });
+    });
+
+    document.getElementById('ADD-TEN').addEventListener('click', () => {
+      return store.dispatch({
+        type: 'ADD-TEN',
+        value: 10,
+        clickCount: 1,
+        numbers: [10],
+      });
+    });
+
+    document.getElementById('valor-soma').addEventListener('change', (event) => {
+      return store.dispatch({
+        type: 'SOMA',
+        value: parseInt(event.target.value),
+        clickCount: 0,
+        numbers: [event.target.value],
+      })
+    })
+
+    const initialState = {
+      value: 0,
+      clickCount: 0,
+      numbers: [],
+    }
+
+    const reducer = (state = initialState, action) => {
+      switch(action.type) {
+        case 'SOMA':
+          return ({  
+            value: state.value + action.value,
+            clickCount: parseInt(action.clickCount) + state.clickCount,
+            numbers: [...state.numbers, parseInt(action.numbers)],
+          })
+        case 'SUBTRAI':
+          return ({  
+            value: state.value - action.value,
+            clickCount: parseInt(action.clickCount) + state.clickCount,
+            numbers: [...state.numbers, parseInt(action.numbers)],
+          })
+        case 'ADD-TEN':
+          return ({  
+            value: state.value + action.value,
+            clickCount: parseInt(action.clickCount) + state.clickCount,
+            numbers: [...state.numbers, parseInt(action.numbers)],
+          })
+        default:
+          return state;
+      }
+    }
+
+    const store = Redux.createStore(reducer);
+    
+    store.subscribe(() => 
+      {
+        console.log(store.getState().numbers)
+        document.querySelector('p').innerHTML = store.getState().value;
+        document.querySelector('h1').innerHTML = store.getState().clickCount;
+      });
+    
+  </script>
+</body>
+</html>
