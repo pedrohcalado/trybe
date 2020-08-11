@@ -5,9 +5,10 @@ const INITIAL_STATE = [{
   name: '',
   age: '',
   email: '',
+  password: '',
 }]
 
-const users = (state = INITIAL_STATE, {type, name, age, email}) => {
+const users = (state = INITIAL_STATE, {type, name, age, email, password}) => {
   switch(type) {
     case REGISTER:
       return ([
@@ -16,6 +17,7 @@ const users = (state = INITIAL_STATE, {type, name, age, email}) => {
           name,
           age,
           email,
+          password,
         }
       ])
     default:

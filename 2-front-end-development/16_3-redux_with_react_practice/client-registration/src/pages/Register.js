@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import { connect } from 'react-redux';
+// import registerCreator from '../actions';
 
 export class Register extends React.Component {
   constructor(props) {
@@ -8,6 +10,7 @@ export class Register extends React.Component {
       name: '',
       age: '',
       email: '',
+      password: '',
     }
     this.inputHandler = this.inputHandler.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -27,11 +30,12 @@ export class Register extends React.Component {
       name: '',
       age: '',
       email: '',
+      password: '',
     })
   }
 
   renderInputs() {
-    const { name, age, email } = this.state;
+    const { name, age, email, password } = this.state;
     return (
       <div>
         <label htmlFor="name">Nome: </label>
@@ -60,11 +64,21 @@ export class Register extends React.Component {
           placeholder="E-mail"
           onChange={this.onChange}
         />
+        <br /><br />
+        <label htmlFor="email">Password: </label>
+        <input
+          id="password"
+          value={password}
+          type="password"
+          placeholder="Senha"
+          onChange={this.onChange}
+        />
       </div>
     );
   }
 
   render() {
+    const { props } = this.props
     return (
       <div>
         <h1>Cadastrar</h1>
@@ -74,8 +88,9 @@ export class Register extends React.Component {
           type="button"
           onClick={() =>
             {
-              this.props.registerCreator(this.state);
+              props.registerCreator(this.state);
               this.resetState();
+              alert('Cliente cadastrado com sucesso');
             }
           }
         >
@@ -100,3 +115,4 @@ export class Register extends React.Component {
 // })
 
 // export default connect(mapStateToProps, mapDispatchToProps)(Register);
+

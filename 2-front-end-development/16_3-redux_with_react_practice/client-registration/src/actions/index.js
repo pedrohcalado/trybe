@@ -1,10 +1,16 @@
 export const REGISTER = 'REGISTER';
+export const LOGIN = 'LOGIN';
 
-const registerCreator = ({name, age, email}) => ({
+export const registerCreator = ({name, age, email, password}) => ({
   type: REGISTER,
   name,
   age,
   email,
-})
+  password,
+});
 
-export default registerCreator;
+export const loginCreator = ({email, password}) => ({
+  type: LOGIN,
+  email,
+  password,
+});
