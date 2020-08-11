@@ -12,3 +12,4 @@ export const habitationCreator = (habitation) => ({
   type: 'SELECTED_HABITATION',
   habitation
 })
+
