@@ -6,21 +6,21 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import RegisterdClients from './pages/RegisteredClients';
 import { Register } from './pages/Register';
-import { registerCreator } from './actions';
-import store from './store';
+import { registerCreator, loginCreator } from './actions';
 
 function App(props) {
-  console.log('store')
   return (
     <div className="App">
       <Switch>
         <Route path="/clients">
-          <RegisterdClients users={props.users} />  
+          <RegisterdClients users={props.users} login={props.login} />  
         </Route>
         <Route path="/register">
           <Register props={props} />
         </Route>
-        <Route path="/login" component={Login} />
+        <Route path="/login">
+          <Login props={props} />
+        </Route>
         <Route exact path="/" component={Home} />
       </Switch>
     </div>
@@ -29,10 +29,12 @@ function App(props) {
 
 const mapDispatchToProps = (dispatch) => ({
   registerCreator: e => dispatch(registerCreator(e)),
+  loginCreator: (email, password, users) => dispatch(loginCreator(email, password, users)),
 })
 
 const mapStateToProps = (state) => ({
   users: state.users,
+  login: state.loginReducer,
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

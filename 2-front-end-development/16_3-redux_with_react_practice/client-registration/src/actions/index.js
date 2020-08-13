@@ -9,8 +9,9 @@ export const registerCreator = ({name, age, email, password}) => ({
   password,
 });
 
-export const loginCreator = ({email, password}) => ({
+export const loginCreator = (email, password, users) => ({
   type: LOGIN,
   email,
   password,
+  users,
 });

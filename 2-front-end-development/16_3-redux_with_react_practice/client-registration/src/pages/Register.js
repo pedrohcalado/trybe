@@ -79,40 +79,33 @@ export class Register extends React.Component {
 
   render() {
     const { props } = this.props
+    console.log(props)
     return (
       <div>
-        <h1>Cadastrar</h1>
-        {this.renderInputs()}
-        <br />
-        <button
-          type="button"
-          onClick={() =>
-            {
-              props.registerCreator(this.state);
-              this.resetState();
-              alert('Cliente cadastrado com sucesso');
+        {props.login.login === false && <p>Login não efetuado</p>}
+        {props.login.login === true && <div>
+          <h1>Cadastrar</h1>
+          {this.renderInputs()}
+          <br />
+          <button
+            type="button"
+            onClick={() =>
+              {
+                props.registerCreator(this.state);
+                this.resetState();
+                alert('Cliente cadastrado com sucesso');
+              }
             }
-          }
-        >
-          Cadastrar
-        </button>
-        <button 
-          type="button"
-        >
-          <Link to="/clients">Clientes cadastrados</Link>
-        </button>
+          >
+            Cadastrar
+          </button>
+          <button 
+            type="button"
+          >
+            <Link to="/clients">Clientes cadastrados</Link>
+          </button>
+        </div>}
       </div>
     );
   }
 }
-
-// const mapDispatchToProps = (dispatch) => ({
-//   registerCreator: e => dispatch(registerCreator(e)),
-// })
-
-// const mapStateToProps = (state) => ({
-//   teste: state,
-// })
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Register);
-
