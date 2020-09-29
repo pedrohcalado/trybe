@@ -104,10 +104,10 @@ The program comprises 1.500 hours of on campus and online classes and addresses 
 ## Back-end development :hourglass_flowing_sand:
 ##### Block 20: Introduction - Relational Databases
 - [x] 20-1: *SQL database*
-- [ ] 20-2: *Finding data in a database*
-- [ ] 20-3: *Filtering data specifically*
-- [ ] 20-4: *Manipulating tables*
-- [ ] 20-5: *[Project - All For One]()*
+- [x] 20-2: *Finding data in a database*
+- [x] 20-3: *Filtering data specifically*
+- [x] 20-4: *Manipulating tables*
+- [x] 20-5: *[Project - All For One](https://github.com/pedrohcalado/mysql-all-for-one)*
 ##### Block 21: Relational Databases
 - [ ] 21-1: *Most used functions in SQL*
 - [ ] 21-2: *Uncomplicating JOINs and UNIONs*
